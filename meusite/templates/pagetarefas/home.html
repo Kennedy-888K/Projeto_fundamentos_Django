@@ -36,7 +36,7 @@
                 <tr>
                     <td>{{tarefa.assunto}}</td>
                     <td>{{tarefa.descricao}}</td>
-                    <td>{{tarefa.status}}</td>
+                    <td>{%if tarefa.status%}Concluída{% else %}Pendente{% endif %}</td>
                     <td>{{tarefa.data_criacao}}</td>
                     <td><a href="{% url 'tarefas:remover' id=tarefa.id %}">Remover</a></td>
                     <td><a href="{% url 'tarefas:editar' id=tarefa.id %}">Editar</a></td>
